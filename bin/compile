@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 `mkdir -p /app/vendor/cmake | curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -o - | tar -xz -C /app/vendor/cmake -f - | export PATH=$PATH:/app/vendor/cmake/bin`
-`ls /app/vendor/cmake/bin; echo $PATH;`
+puts `ls /app/vendor/cmake/bin`
+puts `echo $PATH;`
 
 # sync output
 $stdout.sync = true
